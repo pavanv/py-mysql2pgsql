@@ -98,7 +98,7 @@ class PostgresWriter(object):
                     return default, 'timestamp with time zone'
                 else:
                     return default, 'timestamp without time zone'
-            elif column['type'] == 'time':
+            elif column['type'] == 'time' or column['type'].startswith('time('):
                 default = " DEFAULT NOW()" if t(default) else None
                 if self.tz:
                     return default, 'time with time zone'

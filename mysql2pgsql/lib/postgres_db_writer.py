@@ -1,4 +1,4 @@
-    from __future__ import with_statement, absolute_import
+from __future__ import with_statement, absolute_import
 
 import time
 from contextlib import closing
